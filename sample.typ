@@ -4,128 +4,284 @@
 
 #import "lib.typ": rengo, definition, lemma, theorem, corollary, proof
 #show: rengo.with(
-  title: [自動制御連合講演会サンプル原稿], 
-  authors: [◯ 自動太郎　制御花子(連合大学)　自動次郎 (連合会社)],
-  title-en: [Sample Manuscript for the Japan Joint Automatic Control Conference],
-  authors-en: [$ast$T. Jido, H.~Seigyo (Rengo Univ.) and J. Jido (Rengo Corp.)],
-  abstract: [This document describes the information for authors such as paper submission and the style of manuscript. Only PDF manuscripts are acceptable. The PDF manuscripts should be uploaded on the conference homepage. This document is a template file for a paper, although it is not necessary to strictly follow this format.],
-  keywords: ([Electrical paper submission], [The style of manuscript]),
+  title: [「制御工学勉強会」における学会連携とアウトリーチイベントによる制御工学コミュニティ活性化活動], 
+  authors: [◯ 伊東信雄(制御工学勉強会,大阪公立大高専)　鈴木元哉(制御工学勉強会)　\ こんとろ (こんとろラボ)　川上太一(大阪公立大高専)],
+  title-en: [Initiatives to revitalize the control engineering community through academic collaboration and outreach event at the "Control Engineering Study Group"],
+  authors-en: [ $ast$N. Ito(Control Engineering Study Group, O.M.U.C.T),\ M. Suzuki (Control Engineering Study Group), Contro (Controlabo)\ and Taichi Kawakami(O.M.U.C.T)
+    ],
+  abstract: [For realizing good control engineering study, Control Engineering Study Group was formed. This activity discuss various control engineering topic such as control theory, motor-control, power electronics, robotics and so on. In this study, our activity of Control Engineering Study Group is introduced. In particular, collaboration with SICE is explained.],
+  keywords: ([Control Engineering], [Education])
 )
 
 = はじめに
-使用言語は日本語または英語です．原稿はA4版で2 $tilde.op$ 8ページとし，
-PDFファイルを電子投稿していただきます．
-アップロードするファイルサイズの制限は5MBとします．
+産業界では自動車の電動化やロボティクス，再生エネルギーの利活用など，自動制御技術の需要が日々高まっている．
+自動制御技術を製品に搭載するには，様々な領域の技術者がソフトウェアによる制御技術を習得する必要がある．
+このような背景から，メーカーの技術者に対する制御工学教育への重要性が高まっている．
+しかしながら一言に制御技術と言っても，その制御対象や制御手法は各々の現場によって多岐に渡るため，
+メーカーの技術者は継続的な学習や情報交換の機会が必要となる@msuzu_mscs2024．
+以上の背景のもと，2023年9月からオンラインの有志コミュニティ「制御工学勉強会」が開催されている@cesg_web．
+制御工学勉強会は制御工学に興味のある学生，および社会人で構成されたコミュニティであり，
+Discord@cesg_discord やZoom，Peatix@cesg_peatix といったオンライン上のコミュニケーションツールを利用して活動している．
+本発表では勉強会の概要と，2024年度より新たに開始した計測自動制御学会(SICE）との連携について紹介する．
+今後の制御工学教育の発展の一助となれば幸いである．
 
-= 原稿の体裁
+= 「制御工学勉強会」の概要とその活動
 
-== 全体の体裁
-A4用紙の（US Letterは不可），縦250 mm，横170 mmの枠内に収まるようにし
-てください．
-余白は，上20 mm，下27 mm，左20 mm，右20 mmとします．
-活字の大きさは，
-日本語16ポイント，
-日本語著者名・英語タイトル・英語著者名12ポイント，
-章タイトル12ポイント，
-節タイトル10ポイント，
-本文の活字10ポイントを目安としてください．
-原稿は，
-- 邦文タイトル（英文原稿の場合は不要）
-- 邦文著者名（登壇者に○印）と著者所属（英文原稿の場合は不要）
-- 英文タイトル
-- 英文著者名（登壇者に$$印）と英文著者所属
-- 英文アブストラクト（100ワード程度）
-- 英文キーワード
-- 本文，参考文献
-の順に書いてください．
-英文キーワードまでを1段組，本文・参考文献を2段組にしてください．
-
-== 図と表
-図と表は，Fig.~1，Table~1のように番号を振り
-（@fig:samplefig 参照），図説，図中の説明文は英文で記入してください．
-本文で引用する場合も「Fig.~1に示す」などのようにFig.とTableを使用してください．
+== 参加者構成
+2025年9月1日現在，勉強会のDiscord参加者数は1,235名である．
+@fig:member-age に勉強会の参加者の年齢，
+@fig:member-job に勉強会の参加者の職業別の内訳を示す．
+これらの情報は勉強会の参加者アンケート（任意回答,回答者数157名）から情報提供をいただいている．
+年齢別にみると18歳～39歳までの年代が90\%を占めている．
+2024年8月時点での集計@phi_rengo67 と比較すると，同年代の割合は6\%減少している．このことから学生や若手の社会人だけでなく，
+40代以上の社会人の参加比率が増加した事が伺える．職業別にみても学生（高等専門学校生，大学生，大学院生）の割合が同じく6\%減少し46%となっている．
+前回の調査から新たに公務員や法人職員と言った多様なバックグラウンドのメンバーが増加している．
+制御工学を講義で学んでいる学生よりも，社会実装を伴う社会人層(会社員，教員，自営業，公務員)が参加者の過半数を占めている状況である．
+#figure(
+  placement: top,
+  image("figs/2_member_age.png", width: 80%),
+  caption: [参加者の内訳(年齢別)],
+) <fig:member-age>
 
 #figure(
   placement: top,
-  // svg, png, jpg, gif に対応しています．
-  // eps, pdf などには対応していません．(2024.07.07)
-  // https://typst.app/docs/reference/visualize/image/
-  image("fig1.svg", width: 80%), 
-  caption: [A sample figure.],
-) <fig:samplefig>
+  image("figs/2_member_job.png", width: 80%),
+  caption: [参加者の内訳(職業別)],
+) <fig:member-job>
 
-// #figure(
-//   placement: bottom,
-//   caption: [A sample table.],
-//   table(
-//     columns: 3,
-//     stroke: none,
-//     table.header(
-//       [],
-//       [Size (pt)],
-//       [Font],
-//     ),
-//     table.hline(),
-//     [Title], [16], [Gothic],
-//     [Authors], [12], [Gothic],
-//     [Section title], [12], [Gothic],
-//     [Contents], [10], [Mincho],
-//     [Reference], [9], [Mincho],
-//   )
-// ) <tab:fonts>
 
-図や表中の文字は小さくなりすぎないよう気をつけてください．
-PDF原稿を作成する際，図の画質が劣化しないよう，注意してください．
-特にMicrosoft Wordなどで原稿を作成する際，JPEG画像を貼り付けると，一度圧縮されている画像が再圧縮され画質が劣化するようです．
-貼り付ける画像は，画質の良い（圧縮率の低い）画像を用いるか圧縮しない画像フォーマットを選ぶなど，各自工夫し，最終的なPDFファイルにおいて画質が劣化しないよう注意してください（300 dpi以上の画質を推奨します）．
+== 活動内容
+勉強会は2023年9月の結成からおよそ1ヶ月に1回，土曜日の20時から開催されている，2時間程度のZoomによるオンラインミーティングを主体としている．
+発表が10分程度の「お気軽セッション」を2,3枠，発表が30分程度の「通常セッション」を1枠として構成されており,
+発表内容は制御工学が関係していればその他は不問とした上で希望者を募る形式で運営されている．
 
-== 数式関係
-数式の使用例です．
-$ dot(x) (t) &= A x(t) + B u(t) $ <eq:system>
-$ y(t) &= C x(t) + D u(t) $ <eq:output>
-// 引用する場合には @eq:system と @eq:output としてください．
+2024年10月から2025年3月までに開催された勉強会における発表内容を
+@tab:TopicFY24L,
+2025年4月から2025年9月までに開催された勉強会における発表内容を
+@tab:TopicFY25U,
+に示す．
+@tab:TopicFY24L,
+@tab:TopicFY25U,
+からもわかるように，発表内容の分野は制御理論や数学だけでなく，
+モータ制御や電気工学,自動運転と言った制御が活用されている具体例であったり，体験談や読書記録，ツール情報の共有まで多岐に渡っている．\ 
+勉強会への登壇、参加の敷居を下げるため，定期的にテーマや内容を限定したイベントを開催している．
+第015回，第016回では「MATLAB芸大会」と題して，制御設計での利用者の多いMATLABに焦点を絞ったイベントを開催した(@fig:MATLABev)．
+このイベントではMATLABの開発元であるMathWorks社からの後援も受け登壇者へのノベルティプレゼント企画も実施したため，登壇者8名中3名が初登壇のメンバーとなった．\ 
+第020回，第021回では昨年度好評だった「超おきがる祭」と題して，内容を簡単な内容かつ短時間なお気軽セッション枠のみに限定した(@fig:OKIGARU2025)．
+これは同回の開催が2025年5月および6月であったため，新年度から新たに制御工学を学び始めた人々が萎縮せず気軽に参加できる様にとの目論みであった．
+結果的にこのねらいは達成され，それぞれの回での勉強会参加者数は96名(第020回)，63名(第021回)となり，
+2024年度におけるイベント以外の回における勉強会参加者数の平均46.7名と比較して1.5倍～2.1倍の参加者数となった．
+#figure(
+  placement: top,
+  grid(
+    columns: 2,
+    gutter: 1mm,
+  image("figs/2_MATLABev15.png", width: 97%),
+  image("figs/2_MATLABev16.png")
+  ),
+  caption: [
+    MATLAB芸大会(第015回,第016回)
+  ]
+) <fig:MATLABev>
 
-== 定理環境
-以下は，theorem 環境の使用例です．
-// ctheorems パッケージを使用しています．
-// https://typst.app/universe/package/ctheorems
+#figure(
+  placement: top,
+  grid(
+    columns: 2,
+    gutter: 1mm,
+  image("figs/2_OKIGARU20.png"),
+  image("figs/2_OKIGARU21.png",width: 97%)
+  ),
+  caption: [
+    超おきがる祭(第020回,第021回)
+  ]
+) <fig:OKIGARU2025>
 
-#theorem[
-  ここに定理の内容を記述して下さい．系や補題の場合も同様です．
+
+
+
+#colbreak()
+#colbreak()
+#block(width:100%)[
+#figure(
+    placement: bottom,
+        table(
+        stroke: none, 
+        align: (x, y) =>
+        if y == 0 { center + bottom} else if (x < 2) {center + top} else { left + top},
+         columns: (47pt,47pt,265pt,120pt),
+        table.header(
+        [開催回],[種別],      [発表タイトル],[分野],
+        ),
+        table.hline(),
+            [第013回],[お気軽],[なんか読んでみたっぽい],[読書,自動運転],
+            [第013回],[お気軽],[ライブ！スクリプト！！\ ~MATLABで制御工学に取組む前に~],[MATLAB,Simulink,\ 制御設計],
+            [第013回],[通常],[TOYOTA社内でのMathWorksイベントでやった発表を\ ここでもする],[エンタメ,AI,\ 10重倒立振子],
+        table.hline(),
+            [第014回],[お気軽],[2段構成CMOSオペアンプの回路設計],[電気設計],
+            [第014回],[お気軽],[永久磁石同期モータにおける鉄損低減制御],[モーター制御,磁気],
+            [第014回],[通常],[三相と二相変調の機械振動特性の比較],[モーター制御,機械力学],
+        table.hline(),
+            [第015回],[お気軽],[実機と色々な方法で接続した経験談],[MATLAB],
+            [第015回],[お気軽],[MATLABで使える進化計算ライブラリPLATEMOの紹介],[MATLAB,\ PLATEMO,進化計算],
+            [第015回],[お気軽],[作業時間制御ツールを作ってみた],[MATLAB],
+            [第015回],[お気軽],[6軸パラレルリンク3Dプリンタの運動学を考慮した\ 機械設計パラメータの最適化],[MATLAB,\ 3Dプリンタ,機械設計],
+        table.hline(),
+            [第016回],[お気軽],[このFRDってやつ便利ですね],[MATLAB],
+            [第016回],[お気軽],[SystemIdentification Toolboxの簡単な使用例],[MATLAB],
+            [第016回],[お気軽],[Amaze 制御迷子の迷宮壁－ラビリンス・ウォール－],[MATLAB],
+            [第016回],[お気軽],[CVXでお手軽に凸最適化],[MATLAB,CVX,最適化],
+        table.hline(),
+            [第017回],[お気軽],[制御工学の歴史],[制御理論],
+            [第017回],[通常],[スパース行列の実装方法を解説します],[実装,スパース制御],
+        table.hline(),
+            [第018回],[お気軽],[機械屋さん観点でみるDCモーターとACモーターの違い],[モーター],
+            [第018回],[お気軽],[勉強会と称した雑談用LT登壇への誘い],[勉強会について],
+        ),
+        caption: [2024年度下期の制御工学勉強会発表一覧],
+) <tab:TopicFY24L>
 ]
-#proof[
-  ここには定理の証明を記述して下さい．証明の最後には□印がつきます．
+#colbreak()
+#colbreak()
+#block(width:100%)[
+#figure(
+    placement: bottom,
+        table(
+        stroke: none, 
+        align: (x, y) =>
+        if y == 0 { center + bottom} else if (x < 2) {center + top} else { left + top},
+         columns: (47pt,47pt,265pt,120pt),
+        table.header(
+        [開催回],[種別],      [発表タイトル],[分野],
+        ),
+        table.hline(),
+            [第019回],[お気軽],[カルマンフィルタとは何か、短時間で解説],[カルマンフィルタ],
+            [第019回],[通常],[「自律走行型ミニチュア交通模型」作ってみた物の...],[体験談,相談,自動運転],
+        table.hline(),
+            [第020回],[お気軽],[scratchで制御シミュレーションゲームをつくってみた],[ゲーム],
+            [第020回],[お気軽],[今をときめく？〇〇〇〇〇をぼんやり眺めてみた],[自動運転],
+            [第020回],[お気軽],[「物理のエッセンス」ではじめるPython制御工学],[入門,Python,物理],
+            [第020回],[お気軽],[End2Endは制御部分も浸食するだろうか？(結論：わかりません)],[自動運転],
+        table.hline(),
+            [第021回],[お気軽],[初心者がMATLAB HOMEを使って制御工学入門する],[入門,MATLAB],
+            [第021回],[お気軽],[隊列走行の制御を覗いてみよう],[隊列走行],
+            [第021回],[お気軽],[スライディングモード制御びっくりエピソード],[体験談,スライディングモード制御],
+            [第021回],[お気軽],[システム論を覗いてみよう],[制御理論],
+        table.hline(),
+            [第022回],[お気軽],["リアルタイム"とは何か、なぜ必要か、\ どうやって実現するのか解説します],[実装],
+            [第022回],[通常],[「たかが車輪速センサをやられただけだ！」と\ ガンダムが言っている\ ～屋外移動ロボット/モビリティの\ 縮退運転速度制御のためのGNSS/IMU～],[自動運転],
+            [第022回],[通常],[3段オペアンプ(26パラメータ)に対する自作多パラメータ探索ソフトのデモ],[最適化,電気設計],
+        table.hline(),
+            [第023回],[お気軽],[ネットワーク閉域化は簡単じゃないんです。\ 偉い人にはそれがわからんのですよ！\ ～インフラ未経験のクラウド環境構築～],[ネットワーク構築],
+            [第023回],[お気軽],[ダイレクトドライブモータのメカ設計\ ～フレームレスモータの機械公差と磁界の問題～],[モーター,機械設計],
+            [第023回],[通常],[『ほほぉ…いい性能だな。キサマの作戦目的とIDは!?』\ 『安全、仮面LiDAR２号』 \ ～LiDARを用いた自律移動ロボットの速度制御の\ 安全設計の一例～],[LiDAR,自動運転],
+            ),
+    caption: [2025年度上期の制御工学勉強会発表一覧],
+) <tab:TopicFY25U>
 ]
-定理などの文章は，もともとイタリック書体を使うようになってい
-ますが，和文との整合性を考えて，ローマン書体を使うように変更
-しています．
+#colbreak()
+#colbreak()
 
-// #definition("用語 A")[
-//   用語 A の定義を書きます．
-// ]<def:definition1>
-// #lemma("補題 B")[
-//   補題 B を書きます．タイトルは省略することもできます．
-// ]<lem:lemma1>
-// #lemma[
-//   補題を書きます．番号は定義や補題ごとに 1 からカウントします．
-// ]<lem:lemma2>
-// #corollary[
-//   系を書きます．@def:definition1 のように，ラベルで参照することもできます．
-// ]
 
-= 参考文献
-文献の引用は本文中に @web @ConferenceJP @Journal のように書き，
-本文の最後にまとめて記述します．次のフォーマットを推奨します．
+= SICEとの連携
+勉強会ではアカデミアと産業界とのさらなる連携を目指し，2024年度よりSICE制御部門と連携した活動に取り組んでいる．
+本章ではこの連携活動として，調査研究会の立ち上げおよび同調査研究会と共催した出張イベントについて述べる．
 
-#set enum(numbering: "a)")
-+ 雑誌論文の場合\
-	$[$番号$]$ 著者：論文題目；雑誌名，Vol.~巻, No.~号, pp.~始ページ--終ページ (発行年)
-+ 会議論文の場合\
-	$[$番号$]$ 著者：論文題目；会議論文誌名，pp.~始ページ--終ページ (発行年)
-+ 単行本の場合 @Book\
-	$[$番号$]$ 著者：書名，pp.~始ページ--終ページ, 発行所 (発行年)
-+ Websiteの場合\
-	$[$番号$]$ URL
+#place(
+  bottom,
+  float: true,
+  rect(height: 430pt, fill: none, stroke: none)
+)
+
+== 実学界で踊る現場制御調査研究会
+最初の連携活動として，SICE 制御部門の調査研究会「実学界で踊る現場制御調査研究会」を発足した@sice_ctrl_org_research_current @dance_web．
+
+本調査研究会では下記2つの活動の推進を目的として設立された．
+調査研究会活動の②の活動として制御工学勉強会を後援している．
+
+①「実学界で制御理論がどのように実装されているかについて学術的新規性を一切問わずに情報共有する場を設けるとともに，
+実学からのニーズを探り新たな制御理論の礎とする」，
+
+②「学術界で構築された理論の深い理解を実学界にもたらすため，実学界発のワークショップ，教材開発のコンペティション，
+基礎理論をエンジニア向けに平易に解説するワークショップなどの様々なイベントを開催あるいは後援する」
+
+
+== 出張イベントの開催
+SICEと勉強会との連携活動として，「SICE Festival 2024 with Annual Conference(SICE FES)」におけるSpecial Programでの取り組みを述べる．
+
+計測制御分野のさらなる発展を目的とし，今年度よりSICE Annual ConferenceがSICE FESと呼ばれる大規模イベントへ拡張されることになった@sicefes2024_sp01．
+SICE FESでは通常の年次大会の学術発表だけでなく，Special Programとして大規模なワークショップ・講習会・教育イベント等の様々なイベントを実施する．
+これらの取り組みによりお祭り感を出すことで，計測制御分野の裾野を広げ，さらなる発展を目指すイベントとなっている．
+
+2024年のSICE FESにおいて，Special Programの一つとして制御工学勉強会の出張イベントを開催した@cesg_sicefes2024．
+本イベントは調査研究会共催のもと，SICE FESの会場である高知工科大学永国寺キャンパスと，
+Zoomによるオンライン配信とのハイブリッド構成で開催され，
+参加者数は現地参加者15名（事前予約者14名，当日参加者1名），
+オンライン参加者35名の計50名であった．
+
+#figure(
+  placement: bottom,
+  rect(
+    stroke: 0.2pt,
+  image("figs/3_event_cover.png", width: 100%)
+  ),
+  caption: [出張イベントの紹介画像],
+) <fig:event-cover>
+
+
+本イベント紹介に用いた画像を@fig:event-cover に示す．SICE FESが目指すお祭り感を想起できるようなデザインとした， 発表タイトルは@tab:TopicFY24L の第012回の内容で，オンライン登壇者3名であった．
+当初の予定では一部現地での登壇を予定していたが，当日は台風10号の影響により現地参加が困難となった．
+ハイブリッド構成であったためオンライン登壇に切り替えることで中止することなく参加可能となった．
+
+@fig:questionnaire に本イベントのアンケート結果の一部を示す.アンケートは現地参加，オンライン参加合わせて18名からの回答をいただき，総合的な満足度は5点満点中の4.61点と高評価であった．また，「今後同様にハイブリッド構成のイベントが開催された場合参加したいか」の問いには「現地で参加したい」が27.8%，「どちらかと言えば現地で参加したい」が55.6%と，8割以上が現地で参加したいとの結果であった．
+
+また，自由回答欄には「意義のある活動をされていると感じた」，「分野の裾野を広げることは重要であり素晴らしい取り組み」，「次回も楽しみ」と言った好意的な意見が寄せられた．
+以上の結果から，本イベントは「お祭り感を出すことで，計測制御分野の裾野を広げ，さらなる発展を目指す」とのSICE FESの目的に大きく貢献できたと考えている．
+
+#figure(
+  placement: auto,
+  kind: image,
+
+  rect(
+    stroke: 0.2pt,
+    width: 100%,
+
+    grid(
+      columns: (100%),
+      gutter: 1,
+
+      figure(
+        kind: "q1", 
+        numbering: numbering("a",1),
+        supplement: "(",
+        image("figs/3_event_satisfaction.png", width: 100%), 
+        caption: figure.caption(separator: " ) : ","総合的な満足度(5が満足)")
+      ),
+
+      figure(
+        kind: "q1", 
+        numbering: numbering("a",1),
+        supplement: "(",
+        image("figs/3_event_where.png", width: 100%), 
+        caption: figure.caption(separator: " ) : ","ハイブリッドイベントがあれば参加したいか")
+      ),
+    ),
+  ),
+
+  caption: figure.caption(
+    position: bottom,
+    [出張イベントのアンケート結果(抜粋)]
+  )
+) <fig:questionnaire>
+
+
+
+= おわりに
+本発表では「実践的な制御教育」の新しい形としてオンライン制御系コミュニティ「制御工学勉強会」の概要と，勉強会とSICEとの連携による活動内容を紹介した．
+
+制御工学勉強会では今後も引き続き，1ヶ月に1度のオンライン配信を継続していくとともに，調査研究会の活動の一環として学会でのオーガナイズドセッションの提案や，大阪で開催される予定のメーカーイベント「つくろか！3」におけるロボットプログラミング教室の企画提案@tsukuroka_3 @cschool20241026_peatix など，学術界の枠にとどまらず計測制御分野の裾野を広げる活動を展開していく予定である．
+
+本発表や勉強会の活動が今後の制御工学教育の発展の一助となれば幸いである．
 
 #bibliography("refs.yml", full: false)
 // refs.yml に記載する． refs.bib に変更することもできますが，日本語論文の著者名がうまく表示分けができないため，日本語論文を含む参考文献リストの場合には yml で記載することを推奨します．(2024.07.07)

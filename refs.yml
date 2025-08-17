@@ -1,3 +1,207 @@
+# 和文学術論文誌
+#kimura2017state:
+#    language: japanese
+#    type: Article
+#    title: 状態制約を有する非線形システムに対する状態方程式を保持する変換—システム蘇生変換—
+#    author: ["木村, 駿介", "中村, 文一", "伊吹, 竜也", "三平, 満司"]
+#    page-range: 337–345
+#    date: 2017
+#    parent:
+#        type: Periodical
+#        title: 計測自動制御学会論文集
+#        volume: 53
+#        issue: 6
+#        publisher: 公益社団法人 計測自動制御学会
+#
+# 国内学会
+
+phi_mscs2024:
+    language: japanese
+    type: article
+    author:  ["伊東,信雄"]
+    title: オンライン制御系コミュニティ「制御工学勉強会」の結成
+    date: 2024
+    parent:
+        type: Proceedings
+        title: 制御部門マルチシンポジウム（MSCS2024）
+
+msuzu_mscs2024:
+    language: japanese
+    type: article
+    author:  ["鈴木, 元哉"]
+    title: メーカーエンジニアから見た産業現場制御と制御工学勉強の一考察
+    date: 2024
+    # page-range: 2a1–a03
+    parent:
+        type: Proceedings
+        title: 制御部門マルチシンポジウム（MSCS2024）
+
+msuzu_fastudy18:
+    language: japanese
+    type: Article
+    author:  ["制御系エンジニア"]
+    title: Path following制御における自動運転の経路追従/車体ヨーレート制御
+    url:
+      value: https://fa-study.connpass.com/event/304894/ 
+      date: 2024-04-07
+    parent:
+        type: proceedings
+        title: 第18回FA設備技術勉強会
+
+msuzu_matlabexpo2024:
+    language: japanese
+    type: video
+    author:  ["鈴木, 元哉"]
+    title: 自宅でできる車両運動制御の自己啓発：MATLAB Homeによる4WS車体の操舵制御
+    publisher: mathworks
+    url:
+      value: https://jp.mathworks.com/videos/jp-expo-2024-lightning-talks-lt-13-can-matlab-distribution-be-entertainment-unexpected-affinity-between-matlab-control-engineering-and-live-streaming-1721201022009.html
+      date: 2024-07-17
+    parent:
+        type: proceedings
+        title: matlab expo 2024 japan ライトニングトーク
+
+contro_mscs2024:
+    language: japanese
+    type: article
+    author:  ["こんとろ"]
+    title: 楽しさが開く学習の扉：制御工学コンテンツの創造的実践
+    date: 2024
+    # page-range: 2a1–a03
+    parent:
+        type: Proceedings
+        title: 制御部門マルチシンポジウム（MSCS2024）
+
+contro_matlabexpo2024:
+    language: japanese
+    type: video
+    author: ["こんとろ"]
+    title: MATLAB配信はエンタメたり得るのか！？MATLAB×制御工学×ライブ配信の意外な親和性
+    publisher: MathWorks
+    url:
+      value: https://jp.mathworks.com/videos/jp-expo-2024-lightning-talks-lt-13-can-matlab-distribution-be-entertainment-unexpected-affinity-between-matlab-control-engineering-and-live-streaming-1721201022009.html
+      date: 2024-07-17
+    parent:
+      type: Proceedings
+      title: MATLAB EXPO 2024 JAPAN ライトニングトーク
+
+phi_rengo67:
+    language: japanese
+    type: article
+    author:  ["伊東,信雄","鈴木,元哉","こんとろ,こんとろ"]
+    title: 「制御工学勉強会」における学会連携とライトニングトークによる制御工学コミュニティ活性化活動
+    date: 2024
+    page-range: 772–775
+    url: https://www.jstage.jst.go.jp/article/jacc/67/0/67_772/_article/-char/ja
+    parent:
+        type: Periodical
+        title: 自動制御連合講演会講演論文集
+        volume: 67
+        doi: 10.11511/jacc.67.0_772
+
+# 和文書籍
+#sugie1999feedback:
+#    language: japanese
+#    type: Book
+#    title: フィードバック制御入門
+#    author: ["杉江, 俊治", "藤田, 政之"]
+#    page-range: 1-223
+#    publisher: コロナ社
+#    date: 1999
+#
+# Web サイト
+#shimz2022visually:
+#    type: web
+#    title: 視覚障がい者移動支援ロボット「aiスーツケース」
+#    publisher: 清水建設株式会社
+#    url:
+#        value: https://www.shimz.co.jp/solution/tech374/index.html
+#        date: 2024-03-30
+#
+cesg_discord:
+    type: web
+    title: 制御工学勉強会 Discord
+    publisher: 制御工学勉強会
+    url:
+      value: https://discord.gg/TD7xkjzTKF
+      date: 2024-08-18
+
+cesg_web:
+    type: web
+    title: 制御工学勉強会 Webサイト
+    publisher: 制御工学勉強会
+    url:
+      value: https://control-engineering-seminar.notion.site/control-engineering-seminar/5c6643a330184bea9a9f72e2ce87f6ff
+      date: 2024-08-18
+
+cesg_peatix:
+    type: web
+    title: 制御工学勉強会 Peatix
+    publisher: 制御工学勉強会
+    url:
+      value: https://peatix.com/group/13181263
+      date: 2024-08-18
+
+cesg_sicefes2024:
+    type: web
+    title: 制御工学勉強会 is SICE FES!!(8/28)
+    publisher: 制御工学勉強会
+    url:
+      value: https://control-engineering-seminar.notion.site/in-SICE-FES-8-28-8fab1e1a77134b3b8f04cdfe81f573ab
+      date: 2024-08-18
+
+sicefes2024_sp01:
+    type: web
+    title: SICE FES 2024 Special Program
+    publisher: 計測自動制御学会
+    url:
+      value: https://sice.jp/siceac/sice2024/sp01.html
+      date: 2024-08-18
+
+dance_web:
+    type: web
+    title: 実学界で踊る現場制御理論調査研究会
+    publisher: 計測自動制御学会 制御部門
+    url:
+      value: https://gemba.sice-ctrl.jp/
+      date: 2024-04-20
+
+sice_ctrl_org_research_current:
+    type: web
+    title: 現在の調査研究会
+    publisher: 計測自動制御学会 制御部門
+    url:
+      value: https://www.sice-ctrl.jp/about/organization/research/current/
+      date: 2024-08-18
+
+kimushun_typst_how_to_use:
+    type: web
+    title: How-to-use-typst-for-paper-jp
+
+    publisher: Shunsuke Kimura
+    url:
+      value: https://github.com/kimushun1101/How-to-use-typst-for-paper-jp
+      date: 2024-09-25
+
+tsukuroka_3:
+    type: web
+    title: つくろか！3 WEBサイト
+
+    publisher: つくろか！実行委員会
+    url:
+      value: https://tsukuroka3.notion.site/3-WEB-26e2a0c5174641bc8382d63a6dd70ab0#bf46a5a3f4f94eb88ad516ea03344650
+      date: 2024-09-26
+
+cschool20241026_peatix:
+
+    type: web
+    title: 【つくろか！3 併設イベント】micro:bitで楽しく学ぶロボットプログラミング
+
+    publisher: みんなの制御塾
+    url:
+      value: https://cschool20241026.peatix.com/
+      date: 2024-09-26
+
 # 英文学術論文誌
 Journal:
     type: Article
