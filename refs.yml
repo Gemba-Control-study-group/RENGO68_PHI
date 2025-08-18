@@ -202,6 +202,31 @@ cschool20241026_peatix:
       value: https://cschool20241026.peatix.com/
       date: 2024-09-26
 
+mscs2025_top:
+    type: web
+    title: MSCS2025
+    publisher: 公益社団法人 計測自動制御学会 制御部門
+    url:
+      value: https://mscs2025.sice-ctrl.jp/index.html
+      date: 2025-08-18
+
+mscs2025_colocated:
+    type: web
+    title: 併催イベント｜MSCS2025
+    publisher: 公益社団法人 計測自動制御学会 制御部門
+    url:
+      value: https://mscs2025.sice-ctrl.jp/colocated.html
+      date: 2025-08-18
+
+mscs2025_event_Flyer:
+    type: web
+    title: 特別イベント「VTuber vs ロボット!?制御が楽しく学べる、新感覚バトルセミナー!!」開催のお知らせ
+
+    publisher: 実学界で踊る現場制御理論調査研究会
+    url:
+      value: https://gemba.sice-ctrl.jp/article/mscs2025/
+      date: 2025-08-18
+
 # 英文学術論文誌
 Journal:
     type: Article
