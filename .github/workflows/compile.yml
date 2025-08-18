@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        typ_file_name: [main, main-en]
+        typ_file_name: [main]
     steps:
       - uses: actions/checkout@v4
       - uses: typst-community/setup-typst@v4

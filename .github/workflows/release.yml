@@ -6,7 +6,7 @@ on:
       - 'v*'
 
 env:
-  FILE_NAME: rengo2025-typst
+  FILE_NAME: rengo68-phi
 
 jobs:
   release:
@@ -16,28 +16,16 @@ jobs:
       - name: Make sample ja files
         run: |
           mkdir $FILE_NAME-ja
-          cp -r --parents sample.typ README.md fig1.svg LICENSE.md refs.bib refs.yml .vscode lib.typ rengo.csl $FILE_NAME-ja
+          cp -r --parents main.typ README.md fig LICENSE.md  refs.yml .vscode lib.typ rengo.csl $FILE_NAME-ja
           zip -r $FILE_NAME-ja.zip $FILE_NAME-ja
-      - name: Make sample en files
-        run: |
-          mkdir $FILE_NAME-en
-          cp -r --parents sample-en.typ README-en.md fig1.svg LICENSE.md refs.bib refs.yml .vscode lib-en.typ rengo.csl $FILE_NAME-en
-          zip -r $FILE_NAME-en.zip $FILE_NAME-en
-      - name: Make sample all files
-        run: |
-          mkdir $FILE_NAME
-          cp -r --parents $FILE_NAME-ja $FILE_NAME-en $FILE_NAME
-          zip -r $FILE_NAME.zip $FILE_NAME
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
           files: |
             ${{ env.FILE_NAME }}-ja.zip
-            ${{ env.FILE_NAME }}-en.zip
-            ${{ env.FILE_NAME }}.zip
           draft: true
           generate_release_notes: true
           body: |
-            2024年の第68回 自動制御連合講演会のテンプレートです。
+            2025年の第68回 自動制御連合講演会用の要旨です。
             https://www.jsme.or.jp/conference/rengo68/
             Typst v0.13.1でコンパイルできます。
