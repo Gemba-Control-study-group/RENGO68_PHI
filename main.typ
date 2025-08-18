@@ -9,7 +9,9 @@
   title-en: [Initiatives to revitalize the control engineering community through academic collaboration and outreach event at the "Control Engineering Study Group"],
   authors-en: [ $ast$N. Ito(Control Engineering Study Group, O.M.U.C.T),\ M. Suzuki (Control Engineering Study Group), Contro (Controlabo)\ and Taichi Kawakami(O.M.U.C.T)
     ],
-  abstract: [For realizing good control engineering study, Control Engineering Study Group was formed. This activity discuss various control engineering topic such as control theory, motor-control, power electronics, robotics and so on. In this study, our activity of Control Engineering Study Group is introduced. In particular, collaboration with SICE is explained.],
+  abstract: [
+    For realizing good control engineering study, Control Engineering Study Group was formed. This activity discuss various control engineering topic such as control theory, motor-control, power electronics, robotics and so on. In this study, our activity of Control Engineering Study Group is introduced. In particular, the outreach event collaborated with SICE is explained.
+    ],
   keywords: ([Control Engineering], [Education])
 )
 
