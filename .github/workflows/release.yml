@@ -16,7 +16,7 @@ jobs:
       - name: Make sample ja files
         run: |
           mkdir $FILE_NAME-ja
-          cp -r --parents main.typ README.md fig LICENSE.md  refs.yml .vscode lib.typ rengo.csl $FILE_NAME-ja
+          cp -r --parents main.typ README.md figs LICENSE.md  refs.yml .vscode lib.typ rengo.csl $FILE_NAME-ja
           zip -r $FILE_NAME-ja.zip $FILE_NAME-ja
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
